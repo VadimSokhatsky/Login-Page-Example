@@ -1,0 +1,162 @@
+@import '../../styles/services/variables';
+@import '../../styles/services/mixins';
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: px-to-rem(24);
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: px-to-rem(1872);
+  height: 100%;
+
+  @include w-to($screen-desktop) {
+    width: $screen-desktop;
+  }
+}
+
+.error,
+.valid {
+  display: none;
+}
+
+.infoText {
+  position: absolute;
+  right: px-to-rem(24);
+  bottom: px-to-rem(10);
+  font-size: px-to-rem(12);
+  color: $color-text-3;
+
+  @include w-to($screen-desktop) {
+    display: none;
+  }
+}
+
+.logo {
+  width: px-to-rem(432);
+  margin-left: px-to-rem(272);
+  margin-right: auto;
+
+  @include w-to($screen-desktop) {
+    display: none;
+  }
+}
+
+.logoImage {
+  position: relative;
+  width: px-to-rem(432);
+  height: px-to-rem(104);
+}
+
+.logoText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: px-to-rem(10) px-to-rem(40) px-to-rem(10) 0;
+  font-size: px-to-rem(20);
+  font-weight: 600;
+  word-spacing: px-to-rem(4);
+  color: $color-text-2;
+}
+
+.loginForm {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: px-to-rem(504);
+  padding: 0;
+
+  @include w-to($screen-desktop) {
+    width: $screen-mobile;
+  }
+}
+
+.loginFormLogo {
+  position: relative;
+  width: px-to-rem(200);
+  height: px-to-rem(120);
+}
+
+.logoTextMobile {
+  margin-top: px-to-rem(8);
+  color: $color-text-2;
+  word-spacing: px-to-rem(4);
+
+  @include w-from($screen-desktop) {
+    display: none;
+  }
+}
+
+.loginFormContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: px-to-rem(64);
+}
+
+.loginContentHeader {
+  width: 100%;
+  margin-bottom: px-to-rem(56);
+  padding: px-to-rem(12) 0;
+  font-size: px-to-rem(28);
+  font-weight: 500;
+  color: $color-text-2;
+}
+
+.loginContentInner {
+  height: px-to-rem(352);
+}
+
+.loginFormField {
+  width: 100%;
+  margin-bottom: px-to-rem(24);
+}
+
+.loginFormField label {
+  font-weight: 500;
+  color: $color-text-2;
+}
+
+.loginFormField input {
+}
+
+.loginFormCheckbox {
+  width: 100%;
+  color: $color-text-2;
+}
+
+.loginButton {
+  width: 100%;
+  max-width: 100%;
+  margin-top: px-to-rem(64);
+}
+
+.forgotPassword {
+  width: max-content;
+  margin: px-to-rem(24) auto 0 auto;
+  text-align: center;
+  font-size: px-to-rem(16);
+  font-weight: 600;
+  color: $color-text-2;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.language {
+  width: px-to-rem(232);
+  height: 100%;
+
+  @include w-to($screen-desktop) {
+    display: none;
+  }
+}
